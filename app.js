@@ -42,7 +42,7 @@ app.all("*", function(req, res, next){
 
 console.log('start');
 // const url = req.body.url;
-child = exec(`java -jar ./youtube/Tagging.jar https://youtu.be/qNRzHXQkagc ./public/youtube/img ./public/youtube/blank`,
+child = exec(`java -jar ./youtube/Tagging.jar https://www.youtube.com/watch?v=lwd-wjDQQPY ./public/youtube/img ./public/youtube/blank`,
 function (error, stdout, stderr){
 	console.log('stdout: ' + stdout);
 	console.log('stderr: ' + stderr);
