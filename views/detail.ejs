@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+	<%- partial('layout/layout_head.ejs') %>
+	<body>
+		<%- partial('layout/layout_header.ejs') %>
+
+		<section id="headline" class="section bg-gray detail">
+			<div class="container position-relative">
+				<div class="detail_top">
+                    <div class="detail_left">
+                        <div class="tag">
+                            # 게임
+                        </div>
+                        <div class="youtube">
+                            <iframe width="580" height="250" src="https://www.youtube.com/embed/UknkihjVwWw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="thumbnail_warp">
+                            <img src="/images/index/test1.png">
+                            <img src="/images/index/test1.png">
+                            <img src="/images/index/test1.png">
+                            <img src="/images/index/test1.png">
+                        </div>
+                    </div>
+                    <div class="detail_right">
+                        <div class="detail_step">
+                            <div class="num">1</div>
+                            <span class="detail_title">링　&nbsp;&nbsp;&nbsp;크　:　</span>
+                            <a class="detail_text" href="https://www.youtube.com/watch?v=UknkihjVwWw" target="_blank">https://www.youtube.com/watch?v=UknkihjVwWw</a>
+                        </div>
+                        <div class="detail_step">
+                            <div class="num">2</div>
+                            <span class="detail_title">분석&nbsp;&nbsp;일시　:　</span>
+                            <span class="detail_text">2019-11-01</span>
+                        </div>
+                        <div class="detail_step">
+                            <div class="num">3</div>
+                            <span class="detail_title">음성&nbsp;&nbsp;추출　:　</span>
+                            <span class="detail_text">Y</span>
+                        </div>
+                        <div class="detail_step">
+                            <div class="num">4</div>
+                            <span class="detail_title">이미지추출　:　</span>
+                            <span class="detail_text">Y</span>
+                        </div>
+                        <div class="detail_step">
+                            <div class="num">5</div>
+                            <span class="detail_title">분석키워드　:　</span>
+                            <span class="detail_text">300개</span>
+                        </div>
+                        <div class="detail_step">
+                            <div class="num">6</div>
+                            <span class="detail_title">분석이미지　:　</span>
+                            <span class="detail_text">12개</span>
+                        </div>
+                        <div class="detail_step">
+                            <div class="num">7</div>
+                            <span class="detail_title">신&nbsp;&nbsp;&nbsp;뢰&nbsp;&nbsp;도　:　</span>
+                            <span class="detail_text">82.00점</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="detail_bottom bg-gray">
+                    <div class="detail_left">
+                        <div class="detail_content">
+                            <div class="detail_keyword">
+                                <h3>🔑 주요 키워드</h1>
+                                <div class="keyword_warp">
+                                    <span># 게임</span>
+                                    <span># 오버워치</span>
+                                    <span># 블리자드</span>
+                                    <span># 즐겜</span>
+                                    <span># 트레이서</span>
+                                    <span># 라인하르트</span>
+                                </div>
+                            </div>
+                            <div id="chart-area"></div>
+                        </div>
+                    </div>
+                    <div class="detail_right">
+                        <div class="word_cloud">
+                        </div>
+                    </div>
+                </div>
+
+                
+            
+			</div>
+        </section>
+        
+
+		<%- partial('layout/layout_footer.ejs') %>
+    </body>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+    <%- partial('layout/layout_script.ejs') %>
+    <script>
+        createWordCloud();
+        createKeywordChart();
+    </script>
+    
+ 
+</html>

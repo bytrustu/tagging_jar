@@ -1,0 +1,2358 @@
+/* reset css */
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+a {
+    background-color: transparent;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: '도현체';
+    font-weight: 400;
+}
+
+
+/* end reset css  */
+
+
+
+
+@font-face {
+    font-family: '도현체';
+    src: url('../fonts/BMDOHYEON_ttf.ttf');
+}
+
+@font-face {
+    font-family: 'overwatch';
+    src: url('../fonts/koverwatch.ttf');
+}
+
+
+/* #common  */
+
+body {
+    font-family: '도현체';
+}
+
+.bg-green {
+    background-color: #096931 !important;
+}
+
+.bg-deepgreen {
+    background-color: #0a4623 !important;
+}
+
+.bg-sky {
+    background-color: #4d90a7 !important;
+}
+
+.bg-cyan {
+    background-color: #5978b7 !important;
+}
+
+.bg-lightgray {
+    background: linear-gradient(rgb(244, 243, 242), rgb(244, 243, 242)) !important;
+}
+
+.bg-gray {
+    background-color: #004612bf !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+input[type="text"]:read-only,
+input[type="text"]:disabled {
+    background: #096931;
+    color: #ffffff;
+}
+
+.d-none {
+    display: none !important;
+}
+
+
+/* header */
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    left: 0;
+    top: -54px;
+    z-index: 4;
+    -webkit-transition: top 200ms ease-in-out;
+    -moz-transition: top 200ms ease-in-out;
+    -o-transition: top 200ms ease-in-out;
+    transition: top 200ms ease-in-out;
+    overflow: hidden;
+    background-color: white;
+    color: #5d5d5d;
+    border-bottom: 1px solid #efefef;
+}
+
+header.active {
+    top: 0;
+    overflow: visible;
+}
+
+header .container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1080px;
+    height: 100%;
+    overflow: hidden;
+}
+
+header #logo {
+    display: block;
+    float: left;
+    width: 200px;
+    height: 31px;
+    margin: 13px 20px 0;
+}
+
+
+.section {
+    background-color: white;
+    padding: 50px;
+}
+
+#headline {
+    min-height: 580px;
+    overflow: hidden;
+    height: auto;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+#headline .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-52%);
+    width: 320px;
+    top: 238px;
+}
+
+#headline #wording_slider {
+    position: relative;
+    width: 240px;
+    height: 32px;
+    top: 68px;
+    left: calc(50% - 120px);
+    overflow: hidden;
+    font-size: 29px;
+    line-height: 1.3;
+    letter-spacing: -1.16px;
+    color: #19833a;
+    text-align: center;
+}
+
+#headline #wording_slider .slider_item_wrapper {
+    position: relative;
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+    transition: all 0.25s ease-out 0s;
+    height: 248px;
+    top: -62px;
+}
+
+#headline .left,
+#headline .right,
+#headline .left_comment,
+#headline .right_comment,
+#headline .bottom {
+    position: absolute;
+    /* font-family: 'Nanum Myeongjo', serif; */
+    font-size: 29px;
+    font-weight: bold;
+    color: #096931;
+}
+
+#headline .left {
+    left: calc(50% - 140px);
+    top: 130px;
+}
+
+#headline .right {
+    left: calc(50% - -125px);
+    top: 130px;
+}
+
+#headline .left_comment {
+    left: calc(50% - 280px);
+    top: 130px;
+}
+
+#headline .right_comment {
+    left: calc(50% - -165px);
+    top: 130px;
+}
+
+#headline .bottom {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 380px;
+    width: 300px;
+    text-align: center;
+}
+
+
+
+#items {
+    height: 160px;
+    padding: 0;
+    background-color: #096931;
+    text-align: center;
+}
+
+#items .item_list {
+    /* width: 640px; */
+    position: relative;
+    width: 435px;
+    height: 256px;
+    margin: auto;
+    top: -107.4px;
+}
+
+.item_list::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#items .item_list .item {
+    width: 176.2px;
+    height: 214.8px;
+    margin: 0 18.4px;
+    padding: 31.2px 18px;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#items .item_list .item_first {
+    background-color: #4d90a7;
+}
+
+#items .item_list .item_second {
+    background-color: #5978b7;
+}
+
+#items .item_list .item_third {
+    background-color: #19833a;
+}
+
+#items .item_list .item .icon {
+    display: block;
+    margin: auto;
+    width: 75.3px;
+    height: 75.3px;
+}
+
+#items .item_list .item .button {
+    width: 140.3px;
+    height: 25px;
+    margin: 0 auto;
+    border-radius: 2px;
+    border: solid 2px #ffffff;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.13px;
+    background-color: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.2));
+    font-family: 'overwatch';
+}
+
+#items .item_list .item .button:hover {
+    background-color: #ffffff;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+#items .item_list .item .button:nth-of-type(1):hover {
+    color: #4d90a7;
+}
+
+#items .item_list .item .button:nth-of-type(2):hover {
+    color: #5978b7;
+}
+
+#items .item_list .item .button:nth-of-type(3):hover {
+    color: #19833a;
+}
+
+
+
+#analysis {
+    background-color: white;
+    padding: 55px 0 118px;
+}
+
+#analysis .section_list {
+    /* height: 550px; */
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+#analysis .item_section {
+    width: 415px;
+    float: auto;
+    padding: 0 12.5px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#analysis .item_section .section_title {
+    width: 100%;
+    height: 38px;
+    padding: 7px 8px 5px 18px;
+    margin-top: 8px;
+    background-color: #f1f2f5;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: -0.19px;
+    color: 000;
+    text-align: left;
+    border-radius: 4px;
+    font-family: 'overwatch';
+}
+
+#analysis .item_section .section_subtitle {
+    font-size: 18px;
+    text-align: left;
+    line-height: 0.74;
+    letter-spacing: -0.19px;
+    margin: 16px 0 20px 14px;
+    color: #9ba0aa;
+    font-family: 'overwatch';
+}
+
+#analysis .item_list {
+    position: relative;
+    width: 400px;
+    height: 439px;
+    left: 0;
+    margin: auto;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    -webkit-transition: left 250ms cubic-bezier(.25, .45, .45, .95);
+    -moz-transition: left 250ms cubic-bezier(.25, .45, .45, .95);
+    -o-transition: left 250ms cubic-bezier(.25, .45, .45, .95);
+    transition: left 250ms cubic-bezier(.25, .45, .45, .95);
+}
+
+#analysis .item_list .item {
+    position: relative;
+    width: 390px;
+    height: 135.3px;
+    margin: 0 25px 11px 0;
+    float: left;
+    border-radius: 5.1px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+    border: 1px solid #f7f7f7;
+}
+
+#analysis .item_list .item .main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 250ms linear;
+    -moz-transition: -moz-transform 250ms linear;
+    -o-transition: -o-transform 250ms linear;
+    transition: transform 250ms linear;
+}
+
+#analysis .item_list .item .main.hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#analysis .item_list .item .image {
+    float: left;
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 5.1px 0 0 5.1px;
+}
+
+#analysis .item_list .item .column {
+    width: 190px;
+    height: 100%;
+    float: left;
+}
+
+#analysis .item_list .item .title {
+    display: block;
+    min-height: 33px;
+    margin: 10.5px 15px 0 14px;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.36;
+    letter-spacing: -0.14px;
+    color: #515151;
+    font-family: 'overwatch';
+}
+
+.item h5.title {
+    font-size: 18px;
+}
+
+#analysis .item_list .item .content {
+    display: block;
+    height: 42px;
+    margin: 9px 14px;
+    font-size: 13px;
+    line-height: 1.62;
+    letter-spacing: -0.13px;
+    text-align: left;
+    color: #515151;
+    overflow: hidden;
+    font-family: 'overwatch';
+}
+
+#analysis .item_list .item .progress {
+    width: 100%;
+    height: 4.7px;
+    background-color: #e0e0e0;
+}
+
+#analysis .item_list .item .progress .full {
+    width: 100%;
+    height: 4.7px;
+    background-color: #e68957;
+}
+
+#analysis .item_list .item .progress .charging {
+    width: 100%;
+    height: 4.7px;
+    background-color: #19833a;
+}
+
+#analysis .item_list .item .finish_date {
+    float: right;
+    margin: 4px 12px;
+    font-size: 14px;
+    line-height: 1.33;
+    letter-spacing: -0.12px;
+    color: #818181;
+    font-family: 'overwatch';
+}
+
+
+#analysis .item_list .item .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5.1px;
+    background-color: rgba(11, 134, 49, 0.67);
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition: opacity 250ms linear;
+    -moz-transition: opacity 250ms linear;
+    -o-transition: opacity 250ms linear;
+    transition: opacity 250ms linear;
+}
+
+#analysis .item_list .item .overlay .button {
+    width: 145.4px;
+    height: 37.4px;
+    border-radius: 90px;
+    border: solid 1px #ffffff;
+    background-color: #19833a;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -0.26px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'overwatch';
+}
+
+#analysis .item_list .item .overlay .button:hover{
+    background-color: #ffffff;
+    color: #19833a;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+#analysis .item_list .item .overlay.hover {
+    opacity: 1;
+}
+
+#analysis .item_list .item .overlay .image {
+    padding: 0 18.5px;
+    font-size: 18px;
+    line-height: 125px;
+    letter-spacing: -0.18px;
+    color: white;
+    word-break: keep-all;
+}
+
+#analysis .item_list .item .image {
+    float: left;
+    width: 198px;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 5.1px 0 0 5.1px;
+}
+
+#analysis .item_list .item .overlay .image span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.67;
+    font-family: 'overwatch';
+}
+
+#analysis .item_list .item .overlay .column {
+    padding: 24px;
+}
+
+#analysis .item_list .item .column {
+    width: 190px;
+    height: 100%;
+    float: left;
+}
+
+#analysis .item_section .section_title .buttons {
+    width: 63.2px;
+    height: 28px;
+    float: right;
+}
+
+#analysis .item_section .section_title .button.left {
+    margin-right: 7.2px;
+    background: url(/images/index/arrow_btn.svg) no-repeat center;
+}
+
+#analysis .item_section .section_title .button {
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+    float: left;
+    cursor: pointer;
+}
+
+#analysis .item_section .section_title .button.right {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background: url(/images/index/arrow_btn.svg) no-repeat center;
+}
+
+#analysis .item_section .section_title .button {
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+    float: left;
+    cursor: pointer;
+}
+
+#statistics > div {
+    float: left;
+    width: 50%;
+    min-height: 197px;
+}
+
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #252525;
+    position: relative;
+}
+
+footer .mk-grid {
+    margin: 0 auto;
+}
+
+footer .sub-footer {
+    background-color: #096931;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    padding-top: 22px;
+    text-align: center;
+}
+
+footer .sub-footer span {
+    font-size: 19px;
+    color: white;
+    font-family: 'overwatch';
+    letter-spacing: 2px;
+}
+
+
+
+
+/* tagging */
+
+.tagging_warp {
+    height: 292px;
+    padding-top: 92px;
+    text-align: center;
+}
+
+.tagging_warp>img {
+    width: 390px;
+}
+
+.input_warp {
+    padding: 0 256px 0;
+    height: 130px;
+}
+
+.input_warp .tagging_url {
+    background: #fff;
+    border-radius: 4px;
+    height: 50px;
+    padding: 11.5px 20px 10px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #fff;
+    color: #333;
+    font-weight: 700;
+}
+
+.input_warp .btn_start {
+    width: 177.6px;
+    height: 56px;
+    right: 30px;
+    bottom: -33.5px;
+    line-height: 56px;
+    font-size: 24px;
+    background-color: #096931;
+    border-radius: 34px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #ffffff;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+    float: right;
+    margin-top: 35px;
+    font-family: 'overwatch';
+}
+
+.input_warp .btn_start:hover {
+    background-color: #0a4623 !important;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+.comment_warp {
+    height: 100px;
+    padding: 12px 0 0 300px;
+    position: absolute;
+    bottom: -50px;
+}
+
+.comment_warp span {
+    color: #ffffff;
+    display: block;
+    font-size: 24px;
+    font-family: 'overwatch';
+}
+
+.comment_warp span+span {
+    margin-top: 10px;
+}
+
+#tagging_detail {
+    height: 356px;
+    position: relative;
+}
+
+#tagging_detail > .main {
+    padding: 80px;
+}
+
+#tagging_detail .detail_timer {
+    text-align: center;
+    height: 83px;
+}
+
+#tagging_detail .detail_timer p {
+    color: #ffffff;
+}
+
+#tagging_detail .detail_timer p:nth-of-type(1) {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#tagging_detail .detail_timer p:nth-of-type(2) {
+    font-size: 20px;
+    font-family: 'overwatch';
+}
+
+#tagging_detail .detail_timer p:nth-of-type(3){
+    margin-bottom: 2px;
+}
+
+#tagging_detail .detail_timer p:nth-of-type(3),
+#tagging_detail .detail_timer p:nth-of-type(4) {
+    font-family: 'overwatch';
+    font-size: 18px;
+}
+
+#tagging_detail .detail_simple {
+    margin-top: 100px;
+    text-align: center;
+    background-color: #ffffff;
+    
+    width: 1458px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0px;
+}
+
+#tagging_detail .detail_simple > div {
+    display: inline-block;
+    
+}
+
+#tagging_detail .detail_simple .left {
+    position: relative;
+    cursor: pointer;
+}
+
+#tagging_detail .detail_simple .left img.ico_youtube {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 68px;
+}
+
+#tagging_detail .detail_simple .left img.img_youtube {
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+#tagging_detail .detail_simple .right {
+    width: 600px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    background-color: #096931;
+    vertical-align: top;
+    margin-left: 50px;
+    text-align: left;
+    padding: 30px 50px;
+}
+
+#tagging_detail .detail_simple .right p {
+    color: #ffffff;
+    font-family: 'overwatch';
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+#tagging_detail > .sub {
+    position: absolute;
+    background-color : #096931;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+#tagging_detail .sub .final_comment {
+    position: absolute;
+    transform: translate(-50%, -30%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'overwatch';
+}
+
+
+
+
+.container.category .tagging_warp {
+    padding-top: 85px;
+    height: 330px;
+}
+
+.container.category .tagging_warp > img {
+    width: 300px;
+}
+
+.container.category .input_warp {
+    padding-top: 60px;
+    background-color: #096931;
+    height: auto;
+    overflow: hidden;
+}
+
+.container.category .input_warp > .category_btn {
+    width: 150px;
+    height: 80px;
+    background-color: #0a4623;
+    display: inline-block;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    border: 1px solid #096931;
+}
+
+.container.category .input_warp > .category_btn + .category_btn {
+    border-left: 1px solid #096931;
+}
+
+.container.category .input_warp > .category_btn > span {
+    position: absolute;
+    top: 30px;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: 'overwatch';
+    min-width: 100%;
+    text-align: center;
+}
+
+.container.category .input_warp > .category_btn.active {
+    background-color: #ffffff;
+}
+
+.container.category .input_warp > .category_btn.active > span {
+    color: #0a4623;
+}
+
+.main_warp {
+    min-height: 390px;
+    overflow: hidden;
+}
+
+.main_warp .item_warp + .item_warp {
+    margin-top: 20px;
+}
+
+.main_warp .item {
+    position: relative;
+    min-width: 260px;
+    height: 110px;
+    float: left;
+    border-radius: 5.1px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+.main_warp .item + .item {
+    margin-top: 15px;
+}
+
+.main_warp .item .main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 250ms linear;
+    -moz-transition: -moz-transform 250ms linear;
+    -o-transition: -o-transform 250ms linear;
+    transition: transform 250ms linear;
+}
+
+.main_warp  .image {
+    float: left;
+    width: 198px;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 5.1px 0 0 5.1px;
+}
+
+.main_warp .item .column {
+    width: 190px;
+    height: 100%;
+    float: left;
+}
+
+.main_warp .item .title {
+    display: block;
+    min-height: 23px;
+    margin: 10.5px 15px 0 14px;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.36;
+    letter-spacing: -0.14px;
+    color: #515151;
+    font-family: 'overwatch';
+}
+
+.main_warp .item .content {
+    display: block;
+    height: 38px;
+    margin: 9px 14px 0 14px;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -0.13px;
+    text-align: left;
+    color: #515151;
+    overflow: hidden;
+    font-family: 'overwatch';
+}
+
+.main_warp .item .progress {
+    width: 100%;
+    height: 4.7px;
+    background-color: #e0e0e0;
+}
+
+.main_warp .item .progress .charging {
+    width: 100%;
+    height: 4.7px;
+    background-color: #19833a;
+}
+
+.main_warp .item .finish_date {
+    float: right;
+    margin: 4px 12px;
+    font-size: 14px;
+    line-height: 1.33;
+    letter-spacing: -0.12px;
+    color: #818181;
+    font-family: 'overwatch';
+}
+
+.main_warp .item .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5.1px;
+    background-color: rgba(11, 134, 49, 0.67);
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition: opacity 250ms linear;
+    -moz-transition: opacity 250ms linear;
+    -o-transition: opacity 250ms linear;
+    transition: opacity 250ms linear;
+}
+
+.main_warp .item .overlay .image {
+    padding: 0 18.5px;
+    font-size: 18px;
+    line-height: 125px;
+    letter-spacing: -0.18px;
+    color: white;
+    word-break: keep-all;
+}
+
+.main_warp .item .image {
+    float: left;
+    width: 115px;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 5.1px 0 0 5.1px;
+}
+
+.main_warp .item .overlay .image {
+    padding: 0 18.5px;
+    font-size: 18px;
+    line-height: 125px;
+    letter-spacing: -0.18px;
+    color: white;
+    word-break: keep-all;
+}
+
+.main_warp .item .overlay .column {
+    padding: 24px;
+}
+
+.main_warp .item .column {
+    width: 143px;
+    height: 100%;
+    float: left;
+}
+
+.main_warp .item .overlay .button {
+    width: 145.4px;
+    height: 37.4px;
+    border-radius: 90px;
+    border: solid 1px #ffffff;
+    background-color: #19833a;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -0.26px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'overwatch';
+}
+
+
+.main_warp .item .main.hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.main_warp .item .overlay .button:hover{
+    background-color: #ffffff;
+    color: #19833a;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.main_warp .item .overlay.hover {
+    opacity: 1;
+}
+
+
+
+/* #loading */
+@keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-text-opacity {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes loading-text-opacity {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes loading-text-opacity {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-o-keyframes loading-text-opacity {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.loading-container,
+.loading {
+    height: 100px;
+    position: relative;
+    width: 100px;
+    border-radius: 100%;
+}
+
+
+.loading-container {
+    margin: 90px auto 50px;
+}
+
+.loading {
+    border: 2px solid transparent;
+    border-color: transparent #fff transparent #FFF;
+    -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -o-transform-origin: 50% 50%;
+    -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -webkit-transform-origin: 50% 50%;
+    animation: rotate-loading 1.5s linear 0s infinite normal;
+    transform-origin: 50% 50%;
+}
+
+.loading-container:hover .loading {
+    border-color: transparent #f52929 transparent #f52929;
+}
+
+.loading-container:hover .loading,
+.loading-container .loading {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#loading-text {
+    -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+    animation: loading-text-opacity 2s linear 0s infinite normal;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 45px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 100px;
+    font-family: 'overwatch';
+}
+
+
+
+
+
+
+
+
+#headline.detail {
+    min-height: 937px;
+    font-family: 'overwatch';
+    padding: 0;
+}
+
+#headline.detail h3 {
+    font-family: 'overwatch';
+    font-weight: 300;
+    color: #ffffff;
+}
+
+#headline.detail .container {
+    width: 100%;
+    height: 937px;
+    overflow: hidden;
+    max-width: unset;
+}
+
+
+#headline.detail .container .detail_top {
+    width: 100%;
+    height: calc(50% + 54px);
+    padding-top: 54px;
+}
+
+#headline.detail .container .detail_bottom {
+    width: 100%;
+    height: calc(50% - 54px);
+    background-color: #0a4623;
+    padding: 30px;
+}
+
+#headline.detail .container .detail_top > div,
+#headline.detail .container .detail_bottom > div {
+    display: inline-block;
+}
+
+#headline.detail .container .detail_top .detail_left,
+#headline.detail .container .detail_bottom .detail_left {
+    width: 49%;
+    height: 100%;
+}
+
+#headline.detail .container .detail_top .detail_right,
+#headline.detail .container .detail_bottom .detail_right {
+    width: 49%;
+    height: 100%;
+    vertical-align: top;
+    padding-left: 50px;
+}
+
+#headline.detail .container .detail_top .detail_left {
+    padding: 20px 0 0 334px;
+}
+
+#headline.detail .container .detail_top .detail_right {
+    padding-top: 85px;
+    padding-left: 100px;
+}
+
+#headline.detail .container .detail_bottom .detail_left .detail_content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-left: calc(100% - 660px);
+}
+
+#headline.detail .container .detail_bottom .detail_left .keyword_warp {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    width: 580px;
+}
+
+#headline.detail .container .detail_bottom .detail_left .detail_keyword {
+    padding-left: 60px; 
+}
+
+#headline.detail .container .detail_bottom .detail_left #chart-area {
+    margin-top: 30px;
+}
+
+#headline.detail .container .detail_bottom .detail_left .keyword_warp > span {
+    font-size: 20px;
+    vertical-align: middle;
+    color: #000000;
+}
+
+#headline.detail .container .detail_bottom .detail_left .keyword_warp > span + span {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#headline.detail .container .detail_bottom .detail_left .keyword_warp h3 {
+    margin-top: 0;
+}
+
+.tag {
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    letter-spacing: 2px;
+    background-color: #165430;
+}
+
+.youtube {
+    margin-top: 10px;
+    width: 580px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+.thumbnail_warp {
+    margin-top: 20px;
+    width: 580px;
+    height: 80px;
+    text-align: center;
+}
+
+.thumbnail_warp img {
+    width: 23%;
+    height: 100%;
+}
+
+.thumbnail_warp img + img {
+    margin-left: 1%;
+}
+
+.num {
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #000000;
+    background-color: #165430;
+    border-radius: 5px;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    margin-right: 20px;
+}
+
+.detail_title {
+    color: #ffffff;
+    font-size: 20px;
+    vertical-align: middle;
+    letter-spacing: 3px;
+}
+
+.detail_step + .detail_step {
+    margin-top: 20px;
+}
+
+.detail_text {
+    color: #ffffff;
+    font-size: 20px;
+    vertical-align: middle;
+    letter-spacing: 3px;
+}
+
+a.detail_text {
+    cursor: pointer;
+}
+
+a.detail_text:hover {
+    color: #ffffff;
+}
+
+.error_box {
+    display: none;
+    position: fixed;
+    width: 245px;
+    height: 250px;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom left, #449c69 40%, #1e8a4d 100%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #000000;
+    z-index: 100;
+}
+
+.error_box .dot {
+    width: 8px;
+    height: 8px;
+    background: #FCFCFC;
+    border-radius: 50%;
+    position: absolute;
+    top: 4%;
+    right: 6%;
+}
+
+.error_box .dot.two {
+    right: 12%;
+    opacity: .5;
+}
+
+.error_box .emoji {
+    font-size: 58px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65px;
+}
+
+.error_box .message {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    top: 47%;
+    font-family: 'overwatch';
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.error_box .button-box {
+    position: absolute;
+    background: #0a4623;
+    width: 50%;
+    height: 15%;
+    border-radius: 20px;
+    top: 73%;
+    left: 25%;
+    outline: 0;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    padding-top: 11px;
+    text-align: center;
+    z-index: 100;
+}
+
+.error_box .button-box span {
+    color: #ffffff;
+}
+
+#backdrop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+#loading_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 50, 50, 0.96);
+    z-index: 10;
+}
+
+
+
+
+
+.statistics_warp {
+    width: 100%;
+    min-height: 877px;
+    padding-top: 160px;
+    height: calc(100% - 60px);
+    text-align: center;
+    background: linear-gradient(to bottom left, #40744d 40%, #ffffff 100%);
+}
+
+.statistics_warp .statistics_item {
+    width: 15%;
+    min-width: 280px;
+    height: 600px;
+    background-color: #ffffff;
+    /* border: 1px solid #dddddd; */
+    border-radius: 17px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.statistics_warp .statistics_item + .statistics_item {
+    margin-left: 80px;
+}
+
+.statistics_warp .statistics_item .top {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(#7da086, #dddddd);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    position: relative;
+}
+
+.statistics_warp .statistics_item .top img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.statistics_warp .statistics_item .top #img_sports {
+    width: 214px;
+    height: 220px;
+    top: -70px;
+}
+.statistics_warp .statistics_item .top #img_game {
+    width: 150px;
+    height: 160px;
+    top: -31px;
+}
+.statistics_warp .statistics_item .top #img_animal {
+    width: 162px;
+    height: 179px;
+    top: -44px;
+}
+.statistics_warp .statistics_item .top #img_food {
+    width: 156px;
+    height: 179px;
+    top: -48px;
+}
+
+.statistics_warp .statistics_item .bottom {
+    height: calc(100% - 100px);
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    text-align: left;
+    padding: 70px 0px 0 13px;
+    position: relative;
+}
+
+.statistics_warp .statistics_item .bottom > .statistics_comment > span {
+    vertical-align: middle;
+    font-family: 'overwatch';
+    font-size: 20px;
+}
+
+.statistics_warp .statistics_item .bottom > .statistics_comment + .statistics_comment {
+    margin-top: 20px;
+}
+
+.statistics_item .num {
+    margin-right: 5px;
+}
+
+.statistics_warp .statistics_item .bottom .statistics_footer {
+    width: 100%;
+    height: 50px;
+    background-color: #265f3e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    padding-top: 18px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.statistics_warp .statistics_item .bottom .statistics_footer:hover{
+    background-color: #144f2c;
+}
+
+.statistics_warp .statistics_item .bottom .statistics_footer span {
+    font-family: 'overwatch';
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.statistics_warp .statistics_item .bottom .statistics_subject {
+    width: 100%;
+    height: 50px;
+    background-color: #dddddd;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 17px;
+    padding-right: 16px;
+    text-align: center;
+}
+
+.statistics_warp .statistics_item .bottom .statistics_subject span {
+    font-size: 30px;
+    font-family: 'overwatch';
+    letter-spacing: 2px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+.statistics_box {
+    display: none;
+    position: fixed;
+    width: 1000px;
+    height: 700px;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom left, #e4e4e4 40%, #ffffff 100%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #000000;
+    z-index: 100;
+}
+
+.statistics_box .dot {
+    width: 15px;
+    height: 15px;
+    background: #FCFCFC;
+    border-radius: 50%;
+    position: absolute;
+    top: 4%;
+    right: 50px;
+}
+
+.statistics_box .dot.two {
+    right: 80px;
+    opacity: .5;
+}
+
+.statistics_box .emoji {
+    font-size: 58px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65px;
+}
+
+.statistics_box .message {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    top: 47%;
+    font-family: 'overwatch';
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.statistics_box .button-box {
+    position: absolute;
+    background: #0a4623;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    outline: 0;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    padding-top: 11px;
+    text-align: center;
+    z-index: 100;
+}
+
+.statistics_box .button-box span {
+    color: #ffffff;
+}
+
+
+
+
+.statistics_item .buttons {
+    width: 63.2px;
+    height: 28px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.statistics_item .button.left {
+    margin-right: 7.2px;
+    background: url(/images/index/arrow_btn.svg) no-repeat center;
+}
+
+.statistics_item .button {
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+    float: left;
+    cursor: pointer;
+}
+
+.statistics_item .button.right {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background: url(/images/index/arrow_btn.svg) no-repeat center;
+}
+
+.statistics_item .button {
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+    float: left;
+    cursor: pointer;
+    background-color: #ffffff !important;
+}
+
+
+
+
+.statistics_item .item_list {
+    /* width: 640px; */
+    position: relative;
+    width: 435px;
+    height: 256px;
+    margin: auto;
+    top: -107.4px;
+}
+
+.statistics_item .item_list::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.statistics_item  .item_list .item {
+    width: 176.2px;
+    height: 214.8px;
+    margin: 0 18.4px;
+    padding: 31.2px 18px;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.statistics_item  .item_list .item_first {
+    background-color: #4d90a7;
+}
+
+.statistics_item  .item_list .item_second {
+    background-color: #5978b7;
+}
+
+.statistics_item  .item_list .item_third {
+    background-color: #19833a;
+}
+
+.statistics_item  .item_list .item .icon {
+    display: block;
+    margin: auto;
+    width: 75.3px;
+    height: 75.3px;
+}
+
+.statistics_item  .item_list .item .button {
+    width: 140.3px;
+    height: 25px;
+    margin: 0 auto;
+    border-radius: 2px;
+    border: solid 2px #ffffff;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.13px;
+    background-color: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.2));
+    font-family: 'overwatch';
+}
+
+.statistics_item  .item_list .item .button:hover {
+    background-color: #ffffff;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.statistics_item  .item_list .item .button:nth-of-type(1):hover {
+    color: #4d90a7;
+}
+
+.statistics_item  .item_list .item .button:nth-of-type(2):hover {
+    color: #5978b7;
+}
+
+.statistics_item  .item_list .item .button:nth-of-type(3):hover {
+    color: #19833a;
+}
+/* 
+.faster {
+    animation-delay: 0.1s;
+}
+ */
+
+
+.main.loading_main {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+
+
+
+
+
+
+/* Response  */
+
+
+@media screen and (max-width: 1300px) {
+    .input_warp .btn_start {
+        bottom: -7.5px;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .comment_warp {
+        padding: 0;
+        bottom: -147px;
+        left: 28%;
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    header #logo {
+        width: 150px;
+    }
+
+    #items {
+        height: auto;
+        padding-bottom: 14px;
+    }
+
+    #items .item_list {
+        width: 100%;
+        height: auto;
+        top: -64px;
+    }
+
+    #items .item_list .item {
+        width: 260px !important;
+        height: 180px;
+        float: none;
+        margin: 0 auto 12px;
+        padding: 18.3px 18px 13.1px;
+    }
+
+    .tagging_warp {
+        height: 253px;
+    }
+
+    .tagging_warp img {
+        width: 300px;
+    }
+
+    .input_warp {
+        padding: 0;
+    }
+
+
+    .loading-container {
+        margin: 59px auto;
+    }
+
+    .comment_warp {
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .comment_warp span {
+        font-size: 1.05rem;
+    }
+
+    #headline .left_comment {
+        top: 268px;
+        left: 50%;
+        transform: translateX(-153%);
+        font-weight: 100;
+        font-size: 24px;
+    }
+
+    #headline .right_comment {
+        top: 380px;
+        left: 50%;
+        transform: translateX(-7%);
+        font-weight: 100;
+        font-size: 24px;
+    }
+
+    #headline .left {
+        left: calc(50% - 140px);
+        top: 325px;
+    }
+
+    #headline .right {
+        left: calc(50% - -125px);
+        top: 325px;
+    }
+
+    #headline .bottom {
+        top: 157px;
+    }
+
+    #headline #wording_slider {
+        top: 265px;
+    }
+
+    #headline .logo {
+        display: none;
+    }
+
+    .item_list h5.title {
+        margin-top: 13px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .item_list .title {
+        margin-top: 1rem;
+    }
+
+    #analysis .section_list {
+        display: block;
+        height: auto;
+    }
+
+    #analysis .item_section {
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+
+    #analysis .item_section .section_title {
+        padding-left: 43.6px;
+    }
+
+    #analysis .item_section .section_subtitle {
+        margin: 21px 0 0 30px;
+    }
+
+    #analysis .item_list {
+        width: 100%;
+        height: 145px;
+        margin: 27px 0 45.7px;
+        padding-left: 22px;
+    }
+
+    #analysis .item_list {
+        padding-left: 20.4px;
+    }
+
+    #analysis .item_list .item {
+        width: 324px;
+    }
+
+    #analysis .item_list .item .image {
+        width: 134px;
+    }
+
+    #analysis .item_list .item .column {
+        width: calc(100% - 134px);
+    }
+    #tagging_detail .detail_timer p:nth-of-type(3), 
+    #tagging_detail .detail_timer p:nth-of-type(4) {
+        font-size: 15px;
+    }
+
+    #tagging_detail .detail_simple.mobile {
+        padding: 50px 30px !important;
+    }
+
+    #tagging_detail .detail_simple .left img.ico_youtube {
+        top: 48px;
+    }
+
+    #tagging_detail .detail_simple .left img.img_youtube {
+        width: 300px;
+        height: 150px;
+    }
+
+    #tagging_detail .detail_simple .right {
+        width: 300px;
+        margin-left: 0;
+        padding: 10px 20px;
+    }
+
+    #tagging_detail .sub {
+        position: relative;
+    }
+
+    #final_comment {
+        position: absolute;
+        transform: translate(-50%, -30%);
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        font-size: 50px;
+        color: #ffffff;
+        font-family: 'overwatch';
+    }
+
+    .container.category .input_warp {
+        padding-left: calc( 100% / 2 - 75px );
+    }
+
+    .main_warp {
+        padding-left: 10px;
+    }
+
+    .main_warp .item .image {
+        width: 140px;
+    }
+
+    .main_warp .item {
+        min-width: 340px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<%- partial('layout/layout_head.ejs') %>
+	<body>
+		<%- partial('layout/layout_header.ejs') %>
+
+		<section id="headline" class="section bg-green">
+			<div class="container position-relative">
+				<div class="tagging_warp">
+					<img src="/images/tagging/hashtag.png">
+				</div>
+				<div class="input_warp">
+					<input type="text" class="tagging_url" placeholder="">
+					<button type="button" class="btn_start" onclick="activeTagging();">분석 시작</button>
+				</div>
+				<div class="comment_warp">
+					<span>유튜브 영상 링크를 복사하고 텍스트창에 붙여넣기 하세요.</span>
+					<span>예 ) https://www.youtube.com/watch?v=UknkihjVwWw</span>
+				</div>
+			</div>
+		</section>
+
+		<section id="tagging_detail" class="bg-deepgreen">
+			<div class="main">
+				<div class="container">
+					<div class="loading-container">
+						<div class="loading"></div>
+						<div id="loading-text">분석대기중</div>
+					</div>
+				</div>
+			</div>
+			<div class="sub d-none">
+			</div>
+		</section>
+
+		<div id="backdrop"></div>
+
+
+		<%- partial('layout/layout_footer.ejs') %>
+	</body>
+	<%- partial('layout/layout_script.ejs') %>
+ 
+</html>

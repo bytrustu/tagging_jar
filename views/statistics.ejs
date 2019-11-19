@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+	<%- partial('layout/layout_head.ejs') %>
+	<body>
+		<%- partial('layout/layout_header.ejs') %>
+
+		<section class="statistics_warp">
+			<article class="statistics_item">
+				<div class="top">
+					<img id="img_sports" src="/images/statistics/sports.png">
+				</div>
+				<div class="bottom">
+					<div class="statistics_subject">
+						<span>#스포츠</span>
+						<div class="buttons" data-id="sports">
+							<div class="button left"></div>
+							<div class="button right"></div>
+						</div>
+					</div>
+
+					<section class="main_warp" id="main_sports" data-no="0">
+					</section>
+
+					<div class="statistics_footer" onclick="showStatisticsBox(this);">
+						<span>자세히보기</span>
+					</div>
+	
+				</div>
+			</article>
+
+			<article class="statistics_item">
+				<div class="top">
+					<img id="img_game" src="/images/statistics/game.png">
+				</div>
+				<div class="bottom">
+					<div class="statistics_subject">
+						<span>#게임</span>
+						<div class="buttons" data-id="game">
+							<div class="button left"></div>
+							<div class="button right"></div>
+						</div>
+					</div>
+
+					<section class="main_warp" id="main_game" data-no="0"> 
+					</section>
+
+					
+
+					<div class="statistics_footer" onclick="showStatisticsBox(this);">
+						<span>자세히보기</span>
+					</div>
+
+				</div>
+			</article>
+
+			<article class="statistics_item">
+				<div class="top">
+					<img id="img_animal" src="/images/statistics/animal.png">
+				</div>
+				<div class="bottom">
+					<div class="statistics_subject">
+						<span>#동물</span>
+						<div class="buttons" data-id="animal">
+							<div class="button left"></div>
+							<div class="button right"></div>
+						</div>
+					</div>
+
+					<section class="main_warp" id="main_animal" data-no="0">
+					</section>
+
+					<div class="statistics_footer" onclick="showStatisticsBox(this);">
+						<span>자세히보기</span>
+					</div>
+				</div>
+			</article>
+
+			<article class="statistics_item">
+				<div class="top">
+					<img id="img_food" src="/images/statistics/food.png">
+				</div>
+				<div class="bottom">
+					<div class="statistics_subject">
+						<span>#음식</span>
+						<div class="buttons" data-id="food">
+							<div class="button left"></div>
+							<div class="button right"></div>
+						</div>
+					</div>
+
+					<section class="main_warp" id="main_food" data-no="0">
+					</section>
+
+					<div class="statistics_footer" onclick="showStatisticsBox(this);">
+						<span>자세히보기</span>
+					</div>
+				</div>
+			</article>
+
+
+		</section>
+		<div id="backdrop"></div>
+
+		<%- partial('layout/layout_footer.ejs') %>
+	</body>
+	<%- partial('layout/layout_script.ejs') %>
+	<script src="/js/statistics.js"></script>
+	
+</html>
