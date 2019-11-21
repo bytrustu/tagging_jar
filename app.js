@@ -40,7 +40,7 @@ app.all("*", function(req, res, next){
 });
 
 
-console.log('start');
+// console.log('start');
 // const url = req.body.url;
 // var spawn = require('child_process').spawn, ls = spawn('ls', ['-a']);
 // var options = {maxBuffer:1024*1024*100, encoding:'utf8', timeout:5000};
@@ -56,19 +56,19 @@ console.log('start');
 //   console.log(e.toString())
 // })
 
-child = exec(`java -jar ./youtube/Tagging.jar https://www.youtube.com/watch?v=PoKpbxa96pE ./public/youtube/img ./public/youtube/blank`,
-function (error, stdout, stderr){
-	console.log('stdout: ' + stdout);
-	console.log('stderr: ' + stderr);
-	if(error !== null){
-		console.log('exec error: ' + error);
-	}
-});
+// child = exec(`java -jar ./youtube/Tagging.jar https://www.youtube.com/watch?v=PoKpbxa96pE ./public/youtube/img ./public/youtube/blank`,
+// function (error, stdout, stderr){
+// 	console.log('stdout: ' + stdout);
+// 	console.log('stderr: ' + stderr);
+// 	if(error !== null){
+// 		console.log('exec error: ' + error);
+// 	}
+// });
 
 
 
 app.get('/', routes.index);
-app.get('/active_process', restful.active_process);
+app.post('/active_process', restful.active_process);
 // app.get('/tagging', routes.tagging);
 // app.get('/category', routes.statistics);
 // // app.get('/statistics', routes.statistics);

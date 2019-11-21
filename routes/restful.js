@@ -19,36 +19,11 @@ function send(res, code, data) {
 }
 
 module.exports.active_process = function(req, res){
+	const {url} = req.body;
+	console.log(url)
+	child = exec(`java -jar ./../tagging/youtube/Tagging.jar ${url} ./../tagging/publicyoutube/img ./../tagging/public/youtube/blank`,
+	function (error, stdout, stderr){
+		send(res, 200, true);
+	});
 	
-	child = exec(`java -jar ./../tagging/youtube/Tagging.jar ${url} ./../tagging/publicyoutube/img ./../tagging/public/youtube/blank`,
-	function (error, stdout, stderr){
-		console.log('stdout: ' + stdout);
-		console.log('stderr: ' + stderr);
-		if(error !== null){
-			console.log('exec error: ' + error);
-		}
-	});
-
-
-	db_.categoryList(function(data){
-		if (data) {
-			send(res, 200, data);
-		} else {
-			send(res, 404);
-		}
-	});
-};
-
-module.exports.active_tagging = function(req, res){
-	console.log('start');
-	const url = req.body.url;
-	child = exec(`java -jar ./../tagging/youtube/Tagging.jar ${url} ./../tagging/publicyoutube/img ./../tagging/public/youtube/blank`,
-	function (error, stdout, stderr){
-		console.log('stdout: ' + stdout);
-		console.log('stderr: ' + stderr);
-		if(error !== null){
-			console.log('exec error: ' + error);
-		}
-	});
-
 };
