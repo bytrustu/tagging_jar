@@ -21,7 +21,7 @@ function send(res, code, data) {
 module.exports.active_process = function(req, res){
 	const {url} = req.body;
 	console.log(url)
-	child = exec(`java -jar /tagging/youtube/Tagging.jar ${url} /tagging/publicyoutube/blank /tagging/public/youtube/img`,
+	child = exec(`java -jar /tagging_jar/youtube/Tagging.jar ${url} /tagging_jar/public/youtube/blank /tagging/public/youtube/img`,
 	function (error, stdout, stderr){
 		console.log('=========================')
 		console.log('error:>>>>>>>>>>>>>>>',error)
