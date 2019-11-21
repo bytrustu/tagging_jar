@@ -21,8 +21,15 @@ function send(res, code, data) {
 module.exports.active_process = function(req, res){
 	const {url} = req.body;
 	console.log(url)
-	child = exec(`java -jar ./../tagging/youtube/Tagging.jar ${url} ./../tagging/publicyoutube/img ./../tagging/public/youtube/blank`,
+	child = exec(`java -jar /tagging/youtube/Tagging.jar ${url} /tagging/publicyoutube/blank /tagging/public/youtube/img`,
 	function (error, stdout, stderr){
+		console.log('=========================')
+		console.log('error:>>>>>>>>>>>>>>>',error)
+		console.log('=========================')
+		console.log('error:>>>>>>>>>>>>>>>',stdout)
+		console.log('=========================')
+		console.log('error:>>>>>>>>>>>>>>>',stderr)
+		console.log('=========================')
 		send(res, 200, true);
 	});
 	
