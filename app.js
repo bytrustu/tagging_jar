@@ -67,7 +67,8 @@ function (error, stdout, stderr){
 
 
 
-// app.get('/', routes.index);
+app.get('/', routes.index);
+app.get('/active_process', restful.active_process);
 // app.get('/tagging', routes.tagging);
 // app.get('/category', routes.statistics);
 // // app.get('/statistics', routes.statistics);

@@ -18,7 +18,18 @@ function send(res, code, data) {
 	res.send(data);
 }
 
-module.exports.category_list = function(req, res){
+module.exports.active_process = function(req, res){
+	
+	child = exec(`java -jar ./../tagging/youtube/Tagging.jar ${url} ./../tagging/publicyoutube/img ./../tagging/public/youtube/blank`,
+	function (error, stdout, stderr){
+		console.log('stdout: ' + stdout);
+		console.log('stderr: ' + stderr);
+		if(error !== null){
+			console.log('exec error: ' + error);
+		}
+	});
+
+
 	db_.categoryList(function(data){
 		if (data) {
 			send(res, 200, data);
