@@ -25,12 +25,5 @@ module.exports.active_process = function(req, res){
 	const link = `https://www.youtube.com/watch?v=${url}`;
 	child = exec(`java -jar ${__dirname}/../youtube/Tagging.jar ${link} ${__dirname}/../public/youtube/blank C:/git/tagging_jar/public/youtube/img`,
 	function (error, stdout, stderr){
-		send(res, 200, true);
 	});
-
-	setTimeout(()=>{
-		send(res, 200, true);
-		return;
-	},1000)
-	
 };
