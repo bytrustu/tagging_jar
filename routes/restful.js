@@ -23,7 +23,7 @@ module.exports.active_process = function(req, res){
 	console.log(url)
 	console.log(__dirname);
 	const link = `https://www.youtube.com/watch?v=${url}`;
-	child = exec(`java -jar C:/git/tagging_jar/youtube/Tagging.jar ${link} C:/git/tagging_jar/public/youtube/blank C:/git/tagging_jar/public/youtube/img`,
+	child = exec(`java -jar /tagging_jar/youtube/Tagging.jar ${link} /tagging_jar/public/youtube/blank /tagging_jar/public/youtube/img`,
 	function (error, stdout, stderr){
 		send(res, 200, true);
 	});
